@@ -1,8 +1,9 @@
 package com.aravind.testing;
 
-import org.junit.Test;
-import org.junit.Before;
-import org.junit.After;
+
+import org.junit.jupiter.api.AfterEach;
+import org.junit.jupiter.api.BeforeEach;
+import org.junit.jupiter.api.Test;
 import org.openqa.selenium.Alert;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
@@ -11,8 +12,8 @@ import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.WebDriverWait;
 import org.openqa.selenium.Dimension;
 import org.openqa.selenium.JavascriptExecutor;
-import static org.junit.Assert.assertEquals;
 
+import static org.junit.jupiter.api.Assertions.assertEquals;
 
 import java.time.Duration;
 import java.util.*;
@@ -22,13 +23,13 @@ public class TestDelete {
 	private WebDriver driver;
 	  private Map<String, Object> vars;
 	  JavascriptExecutor js;
-	  @Before
+	  @BeforeEach
 	  public void setUp() {
 	    driver = new ChromeDriver();
 	    js = (JavascriptExecutor) driver;
 	    vars = new HashMap<String, Object>();
 	  }
-	  @After
+	  @AfterEach
 	  public void tearDown() {
 	    driver.quit();
 	  }

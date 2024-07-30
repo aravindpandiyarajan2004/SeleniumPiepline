@@ -1,9 +1,11 @@
 package com.aravind.testing;
 
-import org.junit.Test;
-import org.junit.Before;
-import org.junit.After;
-import static org.junit.Assert.*;
+
+import org.junit.jupiter.api.AfterEach;
+import org.junit.jupiter.api.BeforeEach;
+import org.junit.jupiter.api.Test;
+
+
 
 import org.openqa.selenium.Alert;
 import org.openqa.selenium.By;
@@ -17,6 +19,9 @@ import org.openqa.selenium.Dimension;
 
 import org.openqa.selenium.JavascriptExecutor;
 import java.util.*;
+
+import static org.junit.jupiter.api.Assertions.assertEquals;
+
 import java.net.MalformedURLException;
 
 public class Register {
@@ -24,21 +29,21 @@ public class Register {
 	private Map<String, Object> vars;
 	JavascriptExecutor js;
 
-	@Before
+	@BeforeEach
 	public void setUp() throws MalformedURLException {
 		driver = new ChromeDriver();
 		js = (JavascriptExecutor) driver;
 		vars = new HashMap<String, Object>();
 	}
 
-	@After
+	@AfterEach
 	public void tearDown() {
 		driver.quit();
 	}
 
 	@Test
 	public void signup() throws InterruptedException {
-		driver.get("http://localhost:3000/");
+		driver.get("http://localhost:3000/signup");
 		driver.manage().window().setSize(new Dimension(1051, 798));
 		driver.findElement(By.cssSelector(".nav-item:nth-child(1) > .nav-link > a")).click();
 		driver.findElement(By.name("username")).sendKeys("pandi");

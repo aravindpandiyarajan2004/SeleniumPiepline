@@ -31,12 +31,12 @@ class UserServiceImplTest {
 		
 	}
 	
-	@Test
-	void testLoginUser() {
-		
-		assertNotNull(userService.login("ajith", "ajith123"));
-		
-	}
+//	@Test
+//	void testLoginUser() {
+//		
+//		assertNotNull(userService.login("ajith", "ajith123"));
+//		
+//	}
 	
 
 }

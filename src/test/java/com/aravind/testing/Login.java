@@ -1,9 +1,11 @@
 package com.aravind.testing;
 
-import org.junit.Test;
-import org.junit.Before;
-import org.junit.After;
-import static org.junit.Assert.*;
+
+import org.junit.jupiter.api.AfterEach;
+import org.junit.jupiter.api.BeforeEach;
+import org.junit.jupiter.api.Test;
+
+
 
 import org.openqa.selenium.Alert;
 import org.openqa.selenium.By;
@@ -18,6 +20,9 @@ import org.openqa.selenium.Dimension;
 
 import org.openqa.selenium.JavascriptExecutor;
 import java.util.*;
+
+import static org.junit.jupiter.api.Assertions.assertEquals;
+
 import java.net.MalformedURLException;
 public class Login {
 
@@ -25,23 +30,23 @@ public class Login {
 	private Map<String, Object> vars;
 	JavascriptExecutor js;
 
-	@Before
+	@BeforeEach
 	public void setUp() throws MalformedURLException {
 		driver = new ChromeDriver();
 		js = (JavascriptExecutor) driver;
 		vars = new HashMap<String, Object>();
 	}
 
-	@After
+	@AfterEach
 	public void tearDown() {
 		driver.quit();
 	}
 
 	@Test
 	public void login() throws InterruptedException {
-		driver.get("http://localhost:3000/login");
+		driver.get("http://localhost:3000");
 		driver.manage().window().setSize(new Dimension(1051, 798));
-		driver.findElement(By.name("username")).sendKeys("pandi");
+		driver.findElement(By.name("username")).sendKeys("buvan");
 		driver.findElement(By.name("password")).sendKeys("123");
 		driver.findElement(By.name("user-login")).submit();
 		Thread.sleep(5);
@@ -56,7 +61,7 @@ public class Login {
 	
 	@Test
 	public void login1() {
-		driver.get("http://localhost:3000/login");
+		driver.get("http://localhost:3000");
 		driver.manage().window().setSize(new Dimension(1051, 798));
 		driver.findElement(By.name("username")).sendKeys("");
 		driver.findElement(By.name("password")).sendKeys("123");
@@ -72,7 +77,7 @@ public class Login {
 	
 	@Test
 	public void login2() {
-		driver.get("http://localhost:3000/login");
+		driver.get("http://localhost:3000");
 		driver.manage().window().setSize(new Dimension(1051, 798));
 		driver.findElement(By.name("username")).sendKeys("buvan");
 		driver.findElement(By.name("password")).sendKeys("");
