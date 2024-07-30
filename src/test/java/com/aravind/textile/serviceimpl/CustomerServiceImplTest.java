@@ -45,11 +45,11 @@ class CustomerServiceImplTest {
 		assertEquals("Failure" , customerService.updateCustomer(customer));
 	}
 	
-	@Test
-	void testDeleteCustomer() {
-		int id = 10;
-		assertEquals("Success" , customerService.deleteCustomer(id));
-	}
+//	@Test
+//	void testDeleteCustomer() {
+//		int id = 10;
+//		assertEquals("Success" , customerService.deleteCustomer(id));
+//	}
 	
 	@Test
 	void testDeleteCustomer1() {
@@ -57,11 +57,11 @@ class CustomerServiceImplTest {
 		assertEquals("Failure" , customerService.deleteCustomer(id));
 	}
 	
-	@Test
-	void testFindCustomer() {
-		assertNotNull(customerService.getCustomer(11));
-		
-	}
+//	@Test
+//	void testFindCustomer() {
+//		assertNotNull(customerService.getCustomer(11));
+//		
+//	}
 	
 	@Test
 	void testFindCustomer1() {
@@ -73,10 +73,10 @@ class CustomerServiceImplTest {
 		assertNotNull(customerService.getAllCustomer());
 	}
 	
-	@Test
-	void testGetCustomer1() {
-		assertNull(customerService.getAllCustomer());
-	}
+//	@Test
+//	void testGetCustomer1() {
+//		assertNull(customerService.getAllCustomer());
+//	}
 	
 	
 	

@@ -31,7 +31,7 @@ class OrderServiceImplTest {
 	
 	@Test
 	void testOrderFind() {
-		assertNotNull(orderService.getOrder(9));
+		assertNotNull(orderService.getOrder(1));
 	}
 	
 	@Test

@@ -27,8 +27,8 @@ public class TestViewCustomer {
 	  }
 	  @Test
 	  public void viewTest() {
-	    driver.get("http://localhost:3000/");
+	    driver.get("http://localhost:3000/viewcustomer");
 	    driver.manage().window().setSize(new Dimension(1552, 840));
-	    driver.findElement(By.linkText("View Customer")).click();
+	   // driver.findElement(By.linkText("View Customer")).click();
 	  }
 }

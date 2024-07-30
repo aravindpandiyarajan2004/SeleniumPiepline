@@ -46,7 +46,7 @@ public class TestUpdateOrder {
 
 	@Test
 	public void updateOrder() throws InterruptedException {
-		driver.get("http://localhost:3000/updateorder/13");
+		driver.get("http://localhost:3000/updateorder/1");
 		driver.manage().window().setSize(new Dimension(1051, 798));
 		driver.findElement(By.name("itemName")).clear();
 		driver.findElement(By.name("itemName")).sendKeys("SweatPants");

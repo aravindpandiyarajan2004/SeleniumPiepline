@@ -35,7 +35,7 @@ public class TestDelete {
 	  }
 	  @Test
 	  public void deleteTest() {
-	    driver.get("http://localhost:3000/");
+	    driver.get("http://localhost:3000/viewcustomer");
 	    driver.manage().window().setSize(new Dimension(1536, 816));
 	    driver.findElement(By.linkText("View Customer")).click();
 	    driver.findElement(By.cssSelector("tr:nth-child(5) .ms-1")).click();

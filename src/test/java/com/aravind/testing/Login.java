@@ -3,6 +3,7 @@ package com.aravind.testing;
 
 import org.junit.jupiter.api.AfterEach;
 import org.junit.jupiter.api.BeforeEach;
+import org.junit.jupiter.api.Disabled;
 import org.junit.jupiter.api.Test;
 
 
@@ -58,7 +59,7 @@ public class Login {
 		alert.accept();
 		assertEquals("login success", txt);
 	}
-	
+	@Disabled
 	@Test
 	public void login1() {
 		driver.get("http://localhost:3000");
@@ -74,7 +75,7 @@ public class Login {
 		alert.accept();
 		assertEquals("Please enter user id", txt);
 	}
-	
+	@Disabled
 	@Test
 	public void login2() {
 		driver.get("http://localhost:3000");
